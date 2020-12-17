@@ -1,0 +1,40 @@
+===============
+DEPLOY LOCAL
+===============
+1. Download Tensorflow Serving Docker Repository
+    -> docker pull tensorflow/serving
+2. Buat folder models isinya 
+    -> Dockerfile
+    -> models (Model tensorflow)
+        contoh : 
+            - models/sawit/1( isinya /variable dan saved_model.pb)
+3. Copy Dockerfile dalam 1 directory yang sama dengan folder "models"
+4. Ganti variable yang ada di dalam Dockerfile
+    -> line #35 MODEL_NAME=sawit menjadi nama folder model
+    -> line #37 ganti path model menjadi nama folder model kalian (contoh models/sawit)
+5. run command untuk membuat image docker
+    -> docker build -t {NAMA DOCKER IMAGE} .
+
+
+================
+DEPLOY ON HEROKU
+================
+1. Download Tensorflow Serving Docker Repository
+    -> docker pull tensorflow/serving
+2. Buat folder models isinya 
+    -> Dockerfile
+    -> models (Model tensorflow)
+        contoh : 
+            - models/sawit/1( isinya /variable dan saved_model.pb)
+3. Copy Dockerfile dalam 1 directory yang sama dengan folder "models"
+4. Ganti variable yang ada di dalam Dockerfile
+    -> line #35 MODEL_NAME=sawit menjadi nama folder model
+    -> line #37 ganti path model menjadi nama folder model kalian (contoh models/sawit)
+5. Login heroku 
+    "heroku container:login"
+6. Buat Project baru di heroku
+    "heroku create {NAMA PROJECT}"
+7. Prepare Docker image on LOCAL
+    "heroku container:push web -a {NAMA PROJECT}"
+8. Upload docker image ke heroku
+    "heroku container:release web -a {NAMA PROJECT}"
