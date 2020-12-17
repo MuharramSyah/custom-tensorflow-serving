@@ -1,16 +1,15 @@
 ### Deploy Custom Model using Tensorflow Serving on Cloud
 
+Sebelum mulai kerjaan kita, ada baiknya membaca **BISMILLAH** terlebih dahulu
+
 ##### Prerequisites
 `tensorflow` <br>
 `matplotlib` <br>
 `numpy`
 
 
-Sebelum menggunakan meng-upload model ke cloud, ada baiknya membaca **BISMILLAH** terlebih dahulu
+###DEPLOY DI LOKAL
 
-===============
-DEPLOY Di LOKAL
-===============
 1. Download Tensorflow Serving Docker Repository <br>
     `docker pull tensorflow/serving`
 2. Buat folder models isinya 
@@ -26,9 +25,8 @@ DEPLOY Di LOKAL
     -> `docker build -t {NAMA DOCKER IMAGE} .`
 
 
-================
-DEPLOY ON HEROKU
-================
+###DEPLOY DI HEROKU
+
 1. Download Tensorflow Serving Docker Repository <br>
     `docker pull tensorflow/serving`
 2. Buat folder models isinya 
