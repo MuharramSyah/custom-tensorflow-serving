@@ -8,7 +8,7 @@ Sebelum mulai kerjaan kita, ada baiknya membaca **BISMILLAH** terlebih dahulu
 `numpy`
 
 
-###DEPLOY DI LOKAL
+### DEPLOY DI LOKAL
 
 1. Download Tensorflow Serving Docker Repository <br>
     `docker pull tensorflow/serving`
@@ -25,7 +25,7 @@ Sebelum mulai kerjaan kita, ada baiknya membaca **BISMILLAH** terlebih dahulu
     -> `docker build -t {NAMA DOCKER IMAGE} .`
 
 
-###DEPLOY DI HEROKU
+### DEPLOY DI HEROKU
 
 1. Download Tensorflow Serving Docker Repository <br>
     `docker pull tensorflow/serving`
